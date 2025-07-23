@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- MODIFICAR AQUÍ: Cambia el título para cada evento -->
+    <title>Invitación a nuestra Boda - Jose y Keyli</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    
+    <style>
+        @keyframes magicalGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(270deg, #0f0c29, #302b63, #24243e, #4f4f83);
+            background-size: 600% 600%;
+            animation: magicalGradient 30s ease infinite;
+            color: #e0e0e0;
+        }
+        .font-handwriting {
+            font-family: 'Great Vibes', cursive;
+        }
+        .hero-background {
+            position: relative;
+        }
+        .text-glow {
+            text-shadow: 0 0 8px rgba(240, 217, 181, 0.7), 0 0 10px rgba(240, 217, 181, 0.5);
+        }
+        .card {
+            background-color: rgba(22, 21, 47, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+        }
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        .content-z {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <div id="app-container">
+        <!-- Contenedor de partículas para el fondo animado -->
+        <div id="particles-js"></div>
+
+        <!-- SECCIÓN PRINCIPAL (HERO) -->
+        <section id="hero" class="hero-background min-h-screen flex flex-col items-center justify-center p-4 text-center content-z">
+            <!-- Título corregido para evitar superposición -->
+            <div class="flex flex-col sm:flex-row items-baseline justify-center gap-x-2 sm:gap-x-4 leading-none">
+                <p class="font-handwriting text-5xl md:text-7xl text-amber-100/90">Invitación a nuestra</p>
+                <h1 class="font-handwriting text-8xl md:text-9xl lg:text-[10rem] text-amber-200 text-glow">Boda</h1>
+            </div>
+            <!-- MODIFICADO: Nombres de los novios -->
+            <p class="text-2xl md:text-4xl mt-4">Jose & Keyli</p>
+            
+            <!-- MODIFICAR AQUÍ: Foto principal -->
+            <div class="my-8">
+                <img src="https://placehold.co/300x300/e0b1cb/ffffff?text=J+y+K" alt="Foto de la pareja" class="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover border-4 border-amber-200/50 shadow-lg">
+            </div>
+
+            <!-- Contador Regresivo -->
+            <div id="countdown" class="text-2xl">
+                <p>Faltan:</p>
+                <div id="timer" class="flex space-x-2 sm:space-x-4 justify-center mt-2 text-3xl font-bold"></div>
+            </div>
+        </section>
+
+        <!-- CONTENIDO PRE-FIESTA (Se oculta después del evento) -->
+        <div id="pre-event-content" class="content-z">
+            <!-- Detalles del Evento -->
+            <section class="py-16">
+                <div class="container mx-auto px-4">
+                    <h2 class="font-handwriting text-5xl sm:text-6xl text-center mb-12 text-amber-200 text-glow">Detalles del Evento</h2>
+                    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        <div class="card p-6 text-center">
+                            <h3 class="text-2xl font-bold mb-2">Ceremonia</h3>
+                            <!-- MODIFICAR AQUÍ: Detalles de la ceremonia -->
+                            <p>Sábado, 15 de Noviembre, 2025</p>
+                            <p>16:00 HRS</p>
+                            <p class="mt-2">Iglesia del Sagrado Corazón</p>
+                            <a href="https://maps.google.com" target="_blank" class="text-amber-300 hover:text-amber-100 mt-2 inline-block">Ver en mapa</a>
+                        </div>
+                        <div class="card p-6 text-center">
+                            <h3 class="text-2xl font-bold mb-2">Recepción</h3>
+                            <!-- MODIFICAR AQUÍ: Detalles de la recepción -->
+                            <p>Después de la ceremonia</p>
+                            <p>18:00 HRS</p>
+                            <p class="mt-2">Hacienda "Los Girasoles"</p>
+                            <a href="https://maps.google.com" target="_blank" class="text-amber-300 hover:text-amber-100 mt-2 inline-block">Ver en mapa</a>
+                        </div>
+                        <div class="card p-6 text-center md:col-span-2">
+                             <h3 class="text-2xl font-bold mb-2">Código de Vestimenta</h3>
+                             <!-- MODIFICAR AQUÍ: Código de vestimenta -->
+                             <p>Formal</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: Sugerencia de Regalo -->
+            <section class="py-16">
+                <div class="container mx-auto px-4 max-w-lg">
+                    <div class="card p-8 text-center">
+                        <div class="flex justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-amber-300" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M5 5a3 3 0 015.25-2.121.5.5 0 01.5 0A3 3 0 0115 5v2a1 1 0 011 1v1a1 1 0 01-1 1H5a1 1 0 01-1-1V8a1 1 0 011-1V5zm5 1a1 1 0 00-1 1v1a1 1 0 102 0V7a1 1 0 00-1-1z" clip-rule="evenodd" />
+                              <path d="M3 11a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" />
+                            </svg>
+                        </div>
+                        <h2 class="font-handwriting text-5xl sm:text-6xl text-center mb-4 text-amber-200 text-glow">Regalo</h2>
+                        <p class="text-lg">Tu presencia es nuestro mejor regalo, pero si deseas obsequiarnos algo, agradecemos sea en</p>
+                        <p class="text-xl font-bold mt-2">Sobre Cerrado</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Galería de Fotos del Festejado -->
+            <section class="py-16">
+                 <div class="container mx-auto px-4">
+                    <h2 class="font-handwriting text-5xl sm:text-6xl text-center mb-12 text-amber-200 text-glow">Nuestra Historia</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <!-- MODIFICAR AQUÍ: Añade o cambia las fotos. Sube tus fotos a imgur.com y pega el enlace. -->
+                        <img src="https://placehold.co/400x400/d1d5db/374151?text=Infancia" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal(this.src)">
+                        <img src="https://placehold.co/400x400/fbcfe8/374151?text=Adolescencia" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal(this.src)">
+                        <img src="https://placehold.co/400x400/f5d0a9/374151?text=Universidad" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal(this.src)">
+                        <img src="https://placehold.co/400x400/bfdbfe/374151?text=Ahora" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal(this.src)">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mensaje de la Familia -->
+            <section class="py-16">
+                <div class="container mx-auto px-4 max-w-3xl text-center">
+                    <h2 class="font-handwriting text-5xl sm:text-6xl text-center mb-8 text-amber-200 text-glow">Un Mensaje de la Familia</h2>
+                    <!-- MODIFICAR AQUÍ: Mensaje de la familia -->
+                    <p class="text-lg italic">"Con gran alegría, los invitamos a compartir este día tan especial en el que unimos nuestras vidas para siempre. Su presencia es el mejor regalo que podríamos recibir."</p>
+                </div>
+            </section>
+
+             <!-- Música Favorita -->
+            <section class="py-16">
+                <div class="container mx-auto px-4 max-w-3xl text-center">
+                    <h2 class="font-handwriting text-5xl sm:text-6xl text-center mb-8 text-amber-200 text-glow">Nuestra Canción</h2>
+                    <!-- MODIFICADO: Nuevo iframe de Spotify -->
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5zu4MAEQblGCaTrbXtfpb8?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </section>
+
+            <!-- Formulario de Confirmación (RSVP) -->
+            <section id="rsvp" class="py-16">
+                <div class="container mx-auto px-4 max-w-lg">
+                    <div class="card p-8">
+                        <h2 class="font-handwriting text-5xl sm:text-6xl text-center mb-8 text-amber-200 text-glow">Confirma tu Asistencia</h2>
+                        <form id="rsvp-form">
+                            <div class="mb-4">
+                                <label for="name" class="block mb-2">Nombre Completo:</label>
+                                <input type="text" id="name" name="name" class="w-full p-2 rounded bg-slate-800 border border-slate-600 focus:outline-none focus:border-amber-300" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="guests" class="block mb-2">Número de acompañantes (incluyéndote):</label>
+                                <input type="number" id="guests" name="guests" min="1" value="1" class="w-full p-2 rounded bg-slate-800 border border-slate-600 focus:outline-none focus:border-amber-300" required>
+                            </div>
+                            <button type="submit" class="w-full bg-amber-500 text-slate-900 font-bold py-3 rounded-lg hover:bg-amber-400 transition-colors duration-300">Confirmar Asistencia</button>
+                        </form>
+                        <p id="rsvp-feedback" class="text-center mt-4"></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Libro de Visitas -->
+            <section id="guestbook" class="py-16">
+                 <div class="container mx-auto px-4 max-w-lg">
+                    <div class="card p-8">
+                        <h2 class="font-handwriting text-5xl sm:text-6xl text-center mb-8 text-amber-200 text-glow">Déjanos un Mensaje</h2>
+                        <form id="guestbook-form">
+                            <div class="mb-4">
+                                <label for="guestbook-name" class="block mb-2">Tu Nombre:</label>
+                                <input type="text" id="guestbook-name" name="guestbook-name" class="w-full p-2 rounded bg-slate-800 border border-slate-600 focus:outline-none focus:border-amber-300" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block mb-2">Tu Mensaje:</label>
+                                <textarea id="message" name="message" rows="4" class="w-full p-2 rounded bg-slate-800 border border-slate-600 focus:outline-none focus:border-amber-300" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-amber-500 text-slate-900 font-bold py-3 rounded-lg hover:bg-amber-400 transition-colors duration-300">Enviar Mensaje</button>
+                        </form>
+                        <p id="guestbook-feedback" class="text-center mt-4"></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- CONTENIDO POST-FIESTA (Oculto por defecto) -->
+        <section id="post-event-content" class="py-16 hidden content-z">
+            <div class="container mx-auto px-4">
+                <h2 class="font-handwriting text-5xl sm:text-6xl text-center mb-4 text-amber-200 text-glow">¡Gracias por Acompañarnos!</h2>
+                <p class="text-center text-xl mb-12">Revive los mejores momentos.</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <!-- MODIFICAR AQUÍ: Sube las fotos de la fiesta aquí -->
+                    <img src="https://placehold.co/400x400/a78bfa/ffffff?text=Fiesta+1" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal(this.src)">
+                    <img src="https://placehold.co/400x400/f472b6/ffffff?text=Fiesta+2" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal(this.src)">
+                    <img src="https://placehold.co/400x400/4ade80/ffffff?text=Fiesta+3" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal(this.src)">
+                    <img src="https://placehold.co/400x400/fbbf24/ffffff?text=Fiesta+4" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal(this.src)">
+                    <img src="https://placehold.co/400x400/60a5fa/ffffff?text=Fiesta+5" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal(this.src)">
+                    <img src="https://placehold.co/400x400/f87171/ffffff?text=Fiesta+6" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal(this.src)">
+                </div>
+            </div>
+        </section>
+
+        <!-- Pie de página -->
+        <footer class="py-8 text-center content-z">
+            <p>Creado con ❤️ por [Tu Nombre o Marca]</p>
+        </footer>
+    </div>
+
+    <!-- Modal para ver imágenes -->
+    <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50 hidden" onclick="closeModal()">
+        <img id="modal-img" src="" alt="Imagen ampliada" class="max-w-full max-h-full rounded-lg">
+        <button class="absolute top-4 right-4 text-white text-3xl">&times;</button>
+    </div>
+
+    <!-- Librería para partículas -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- Firebase -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        
+        // --- CONFIGURACIÓN DE FIREBASE ---
+        // Estas variables se obtienen del entorno de Canvas. No las modifiques.
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-invitation-app';
+
+        let db;
+        try {
+            const app = initializeApp(firebaseConfig);
+            db = getFirestore(app);
+            console.log("Firebase initialized successfully!");
+        } catch (e) {
+            console.error("Error initializing Firebase:", e);
+        }
+
+        // --- LÓGICA DE LA APLICACIÓN ---
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // --- MODIFICAR AQUÍ: FECHA DEL EVENTO (Año, Mes-1, Día, Hora, Minuto, Segundo) ---
+            const eventDate = new Date(2025, 10, 15, 16, 0, 0).getTime();
+
+            // Lógica para mostrar contenido antes o después del evento
+            const preEventContent = document.getElementById('pre-event-content');
+            const postEventContent = document.getElementById('post-event-content');
+            if (new Date().getTime() > eventDate) {
+                if(preEventContent) preEventContent.style.display = 'none';
+                if(postEventContent) postEventContent.style.display = 'block';
+            }
+
+            // Lógica del contador
+            const timerElement = document.getElementById('timer');
+            if (timerElement) {
+                const interval = setInterval(function() {
+                    const now = new Date().getTime();
+                    const distance = eventDate - now;
+                    
+                    if (distance < 0) {
+                        clearInterval(interval);
+                        timerElement.innerHTML = "¡El gran día llegó!";
+                        return;
+                    }
+
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    
+                    timerElement.innerHTML = `
+                        <div>${days}<span class="block text-xs sm:text-sm">Días</span></div>
+                        <div>${hours}<span class="block text-xs sm:text-sm">Horas</span></div>
+                        <div>${minutes}<span class="block text-xs sm:text-sm">Min</span></div>
+                        <div>${seconds}<span class="block text-xs sm:text-sm">Seg</span></div>
+                    `;
+                }, 1000);
+            }
+
+            // Lógica del formulario RSVP
+            const rsvpForm = document.getElementById('rsvp-form');
+            if (rsvpForm) {
+                rsvpForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    if (!db) {
+                        alert("La base de datos no está disponible.");
+                        return;
+                    }
+                    const name = e.target.name.value;
+                    const guests = e.target.guests.value;
+                    const feedbackEl = document.getElementById('rsvp-feedback');
+                    
+                    try {
+                        // MODIFICAR AQUÍ: Puedes cambiar 'wedding-jose-keyli' a un ID único para cada evento
+                        const docRef = await addDoc(collection(db, `/artifacts/${appId}/public/data/invitations/wedding-jose-keyli/rsvps`), {
+                            name: name,
+                            guests: parseInt(guests),
+                            timestamp: new Date()
+                        });
+                        feedbackEl.textContent = "¡Gracias por confirmar! Te esperamos.";
+                        feedbackEl.style.color = '#4ade80';
+                        rsvpForm.reset();
+                    } catch (error) {
+                        console.error("Error adding document: ", error);
+                        feedbackEl.textContent = "Hubo un error. Inténtalo de nuevo.";
+                        feedbackEl.style.color = '#f87171';
+                    }
+                });
+            }
+
+            // Lógica del libro de visitas
+            const guestbookForm = document.getElementById('guestbook-form');
+            if (guestbookForm) {
+                 guestbookForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    if (!db) {
+                        alert("La base de datos no está disponible.");
+                        return;
+                    }
+                    const name = e.target['guestbook-name'].value;
+                    const message = e.target.message.value;
+                    const feedbackEl = document.getElementById('guestbook-feedback');
+                    
+                    try {
+                        // MODIFICAR AQUÍ: Usa el mismo ID único del evento
+                        const docRef = await addDoc(collection(db, `/artifacts/${appId}/public/data/invitations/wedding-jose-keyli/guestbook`), {
+                            name: name,
+                            message: message,
+                            timestamp: new Date()
+                        });
+                        feedbackEl.textContent = "¡Tu mensaje ha sido enviado! Gracias.";
+                        feedbackEl.style.color = '#4ade80';
+                        guestbookForm.reset();
+                    } catch (error) {
+                        console.error("Error adding document: ", error);
+                        feedbackEl.textContent = "Hubo un error. Inténtalo de nuevo.";
+                        feedbackEl.style.color = '#f87171';
+                    }
+                });
+            }
+
+            // --- Configuración para el efecto Plexus ---
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                    "color": { "value": "#f0d9b5" },
+                    "shape": { "type": "circle" },
+                    "opacity": { "value": 0.5, "random": true },
+                    "size": { "value": 7, "random": true },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#f0d9b5",
+                        "opacity": 0.2,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 2,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out"
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": { "enable": true, "mode": "grab" },
+                        "onclick": { "enable": true, "mode": "push" }
+                    },
+                    "modes": {
+                        "grab": { "distance": 140, "line_opacity": 0.5 },
+                        "push": { "particles_nb": 4 }
+                    }
+                },
+                "retina_detect": true
+            });
+        });
+
+        // Funciones del Modal de imágenes
+        const modal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('modal-img');
+        window.openModal = function(src) {
+            modal.style.display = "flex";
+            modalImg.src = src;
+        }
+        window.closeModal = function() {
+            modal.style.display = "none";
+        }
+
+    </script>
+</body>
+</html>
