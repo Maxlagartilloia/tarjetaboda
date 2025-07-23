@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- MODIFICAR AQUÍ: Cambia el título para cada evento -->
     <title>Invitación a nuestra Boda - Jose y Keyli</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -62,27 +61,23 @@
 
         <!-- SECCIÓN PRINCIPAL (HERO) -->
         <section id="hero" class="hero-background min-h-screen flex flex-col items-center justify-center p-4 text-center content-z">
-            <!-- Título corregido para evitar superposición -->
             <div class="flex flex-col sm:flex-row items-baseline justify-center gap-x-2 sm:gap-x-4 leading-none">
                 <p class="font-handwriting text-5xl md:text-7xl text-amber-100/90">Invitación a nuestra</p>
                 <h1 class="font-handwriting text-8xl md:text-9xl lg:text-[10rem] text-amber-200 text-glow">Boda</h1>
             </div>
-            <!-- MODIFICAR AQUÍ: Nombres de los novios -->
             <p class="text-2xl md:text-4xl mt-4">Jose & Keyli</p>
             
-            <!-- MODIFICAR AQUÍ: Foto principal -->
             <div class="my-8">
                 <img src="https://placehold.co/300x300/e0b1cb/ffffff?text=J+y+K" alt="Foto de la pareja" class="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover border-4 border-amber-200/50 shadow-lg">
             </div>
 
-            <!-- Contador Regresivo -->
             <div id="countdown" class="text-2xl">
                 <p>Faltan:</p>
                 <div id="timer" class="flex space-x-2 sm:space-x-4 justify-center mt-2 text-3xl font-bold"></div>
             </div>
         </section>
 
-        <!-- CONTENIDO PRE-FIESTA (Se oculta después del evento) -->
+        <!-- CONTENIDO PRE-FIESTA -->
         <div id="pre-event-content" class="content-z">
             <!-- Detalles del Evento -->
             <section class="py-16">
@@ -91,23 +86,20 @@
                     <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                         <div class="card p-6 text-center">
                             <h3 class="text-2xl font-bold mb-2">Ceremonia</h3>
-                            <!-- MODIFICAR AQUÍ: Detalles de la ceremonia -->
                             <p>Sábado, 15 de Noviembre, 2025</p>
                             <p>16:00 HRS</p>
-                            <p class="mt-2">Iglesia del Sagrado Corazón</p>
-                            <a href="https://maps.google.com" target="_blank" class="text-amber-300 hover:text-amber-100 mt-2 inline-block">Ver en mapa</a>
+                            <p class="mt-2">Parroquia Eclesiástica La Dolorosa</p>
+                            <a href="https://maps.app.goo.gl/D5rpowkDjds5oEEV7" target="_blank" class="text-amber-300 hover:text-amber-100 mt-2 inline-block">Ver en mapa</a>
                         </div>
                         <div class="card p-6 text-center">
                             <h3 class="text-2xl font-bold mb-2">Recepción</h3>
-                            <!-- MODIFICAR AQUÍ: Detalles de la recepción -->
                             <p>Después de la ceremonia</p>
                             <p>18:00 HRS</p>
-                            <p class="mt-2">Hacienda "Los Girasoles"</p>
-                            <a href="https://maps.google.com" target="_blank" class="text-amber-300 hover:text-amber-100 mt-2 inline-block">Ver en mapa</a>
+                            <p class="mt-2">Hacienda La Macarena</p>
+                            <a href="https://maps.app.goo.gl/NuwLq3SDHe9nrLQk6" target="_blank" class="text-amber-300 hover:text-amber-100 mt-2 inline-block">Ver en mapa</a>
                         </div>
                         <div class="card p-6 text-center md:col-span-2">
                              <h3 class="text-2xl font-bold mb-2">Código de Vestimenta</h3>
-                             <!-- MODIFICAR AQUÍ: Código de vestimenta -->
                              <p>Formal</p>
                         </div>
                     </div>
@@ -131,12 +123,11 @@
                 </div>
             </section>
 
-            <!-- Galería de Fotos del Festejado -->
+            <!-- Galería de Fotos -->
             <section class="py-16">
                  <div class="container mx-auto px-4">
                     <h2 class="font-handwriting text-5xl sm:text-6xl text-center mb-12 text-amber-200 text-glow">Nuestra Historia</h2>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <!-- MODIFICAR AQUÍ: Añade o cambia las fotos. Sube tus fotos a imgur.com y pega el enlace. -->
                         <img src="https://placehold.co/400x400/d1d5db/374151?text=Infancia" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal(this.src)">
                         <img src="https://placehold.co/400x400/fbcfe8/374151?text=Adolescencia" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal(this.src)">
                         <img src="https://placehold.co/400x400/f5d0a9/374151?text=Universidad" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal(this.src)">
@@ -149,16 +140,14 @@
             <section class="py-16">
                 <div class="container mx-auto px-4 max-w-3xl text-center">
                     <h2 class="font-handwriting text-5xl sm:text-6xl text-center mb-8 text-amber-200 text-glow">Un Mensaje de la Familia</h2>
-                    <!-- MODIFICAR AQUÍ: Mensaje de la familia -->
                     <p class="text-lg italic">"Con gran alegría, los invitamos a compartir este día tan especial en el que unimos nuestras vidas para siempre. Su presencia es el mejor regalo que podríamos recibir."</p>
                 </div>
             </section>
 
-             <!-- Música Favorita -->
+            <!-- Música Favorita -->
             <section class="py-16">
                 <div class="container mx-auto px-4 max-w-3xl text-center">
                     <h2 class="font-handwriting text-5xl sm:text-6xl text-center mb-8 text-amber-200 text-glow">Nuestra Canción</h2>
-                    <!-- MODIFICAR AQUÍ: Cambia el enlace de Spotify -->
                     <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5zu4MAEQblGCaTrbXtfpb8?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </div>
             </section>
@@ -206,23 +195,6 @@
             </section>
         </div>
 
-        <!-- CONTENIDO POST-FIESTA (Oculto por defecto) -->
-        <section id="post-event-content" class="py-16 hidden content-z">
-            <div class="container mx-auto px-4">
-                <h2 class="font-handwriting text-5xl sm:text-6xl text-center mb-4 text-amber-200 text-glow">¡Gracias por Acompañarnos!</h2>
-                <p class="text-center text-xl mb-12">Revive los mejores momentos.</p>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <!-- MODIFICAR AQUÍ: Sube las fotos de la fiesta aquí -->
-                    <img src="https://placehold.co/400x400/a78bfa/ffffff?text=Fiesta+1" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal(this.src)">
-                    <img src="https://placehold.co/400x400/f472b6/ffffff?text=Fiesta+2" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal(this.src)">
-                    <img src="https://placehold.co/400x400/4ade80/ffffff?text=Fiesta+3" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal(this.src)">
-                    <img src="https://placehold.co/400x400/fbbf24/ffffff?text=Fiesta+4" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal(this.src)">
-                    <img src="https://placehold.co/400x400/60a5fa/ffffff?text=Fiesta+5" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal(this.src)">
-                    <img src="https://placehold.co/400x400/f87171/ffffff?text=Fiesta+6" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal(this.src)">
-                </div>
-            </div>
-        </section>
-
         <!-- Pie de página -->
         <footer class="py-8 text-center content-z">
             <p>Creado con ❤️ por [Tu Nombre o Marca]</p>
@@ -244,9 +216,20 @@
         import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
         
         // --- CONFIGURACIÓN DE FIREBASE ---
-        // Estas variables se obtienen del entorno de Canvas. No las modifiques.
-        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
-        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-invitation-app';
+        // Para que los formularios funcionen en GitHub, necesitas tu propio proyecto de Firebase.
+        // 1. Ve a https://firebase.google.com/ y crea un proyecto nuevo (es gratis).
+        // 2. En tu proyecto, ve a "Configuración del proyecto" (el ícono de engranaje).
+        // 3. En la sección "Tus apps", haz clic en el ícono web (</>) para registrar una nueva app web.
+        // 4. Dale un apodo y copia el objeto `firebaseConfig` que te proporcionan.
+        // 5. Pega ese objeto aquí, reemplazando el que está de ejemplo.
+        const firebaseConfig = {
+            apiKey: "TU_API_KEY",
+            authDomain: "TU_AUTH_DOMAIN",
+            projectId: "TU_PROJECT_ID",
+            storageBucket: "TU_STORAGE_BUCKET",
+            messagingSenderId: "TU_MESSAGING_SENDER_ID",
+            appId: "TU_APP_ID"
+        };
 
         let db;
         try {
@@ -254,41 +237,25 @@
             db = getFirestore(app);
             console.log("Firebase initialized successfully!");
         } catch (e) {
-            console.error("Error initializing Firebase:", e);
+            console.error("Error initializing Firebase. Please check your config.", e);
         }
 
-        // --- LÓGICA DE LA APLICACIÓN ---
         document.addEventListener('DOMContentLoaded', function() {
-            
-            // --- MODIFICAR AQUÍ: FECHA DEL EVENTO (Año, Mes-1, Día, Hora, Minuto, Segundo) ---
             const eventDate = new Date(2025, 10, 15, 16, 0, 0).getTime();
-
-            // Lógica para mostrar contenido antes o después del evento
-            const preEventContent = document.getElementById('pre-event-content');
-            const postEventContent = document.getElementById('post-event-content');
-            if (new Date().getTime() > eventDate) {
-                if(preEventContent) preEventContent.style.display = 'none';
-                if(postEventContent) postEventContent.style.display = 'block';
-            }
-
-            // Lógica del contador
             const timerElement = document.getElementById('timer');
             if (timerElement) {
-                const interval = setInterval(function() {
+                const interval = setInterval(() => {
                     const now = new Date().getTime();
                     const distance = eventDate - now;
-                    
                     if (distance < 0) {
                         clearInterval(interval);
                         timerElement.innerHTML = "¡El gran día llegó!";
                         return;
                     }
-
                     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                    
                     timerElement.innerHTML = `
                         <div>${days}<span class="block text-xs sm:text-sm">Días</span></div>
                         <div>${hours}<span class="block text-xs sm:text-sm">Horas</span></div>
@@ -298,26 +265,19 @@
                 }, 1000);
             }
 
-            // Lógica del formulario RSVP
             const rsvpForm = document.getElementById('rsvp-form');
             if (rsvpForm) {
-                rsvpForm.addEventListener('submit', async function(e) {
+                rsvpForm.addEventListener('submit', async (e) => {
                     e.preventDefault();
                     if (!db) {
-                        alert("La base de datos no está disponible.");
+                        alert("Error de conexión con la base de datos. Revisa la configuración.");
                         return;
                     }
                     const name = e.target.name.value;
                     const guests = e.target.guests.value;
                     const feedbackEl = document.getElementById('rsvp-feedback');
-                    
                     try {
-                        // MODIFICAR AQUÍ: Puedes cambiar 'wedding-jose-keyli' a un ID único para cada evento
-                        const docRef = await addDoc(collection(db, `/artifacts/${appId}/public/data/invitations/wedding-jose-keyli/rsvps`), {
-                            name: name,
-                            guests: parseInt(guests),
-                            timestamp: new Date()
-                        });
+                        await addDoc(collection(db, "rsvps"), { name, guests: parseInt(guests), timestamp: new Date() });
                         feedbackEl.textContent = "¡Gracias por confirmar! Te esperamos.";
                         feedbackEl.style.color = '#4ade80';
                         rsvpForm.reset();
@@ -329,26 +289,19 @@
                 });
             }
 
-            // Lógica del libro de visitas
             const guestbookForm = document.getElementById('guestbook-form');
             if (guestbookForm) {
-                 guestbookForm.addEventListener('submit', async function(e) {
+                 guestbookForm.addEventListener('submit', async (e) => {
                     e.preventDefault();
                     if (!db) {
-                        alert("La base de datos no está disponible.");
+                         alert("Error de conexión con la base de datos. Revisa la configuración.");
                         return;
                     }
                     const name = e.target['guestbook-name'].value;
                     const message = e.target.message.value;
                     const feedbackEl = document.getElementById('guestbook-feedback');
-                    
                     try {
-                        // MODIFICAR AQUÍ: Usa el mismo ID único del evento
-                        const docRef = await addDoc(collection(db, `/artifacts/${appId}/public/data/invitations/wedding-jose-keyli/guestbook`), {
-                            name: name,
-                            message: message,
-                            timestamp: new Date()
-                        });
+                        await addDoc(collection(db, "guestbook"), { name, message, timestamp: new Date() });
                         feedbackEl.textContent = "¡Tu mensaje ha sido enviado! Gracias.";
                         feedbackEl.style.color = '#4ade80';
                         guestbookForm.reset();
@@ -360,46 +313,13 @@
                 });
             }
 
-            // --- Configuración para el efecto Plexus ---
             particlesJS('particles-js', {
-                "particles": {
-                    "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
-                    "color": { "value": "#f0d9b5" },
-                    "shape": { "type": "circle" },
-                    "opacity": { "value": 0.5, "random": true },
-                    "size": { "value": 7, "random": true },
-                    "line_linked": {
-                        "enable": true,
-                        "distance": 150,
-                        "color": "#f0d9b5",
-                        "opacity": 0.2,
-                        "width": 1
-                    },
-                    "move": {
-                        "enable": true,
-                        "speed": 2,
-                        "direction": "none",
-                        "random": false,
-                        "straight": false,
-                        "out_mode": "out"
-                    }
-                },
-                "interactivity": {
-                    "detect_on": "canvas",
-                    "events": {
-                        "onhover": { "enable": true, "mode": "grab" },
-                        "onclick": { "enable": true, "mode": "push" }
-                    },
-                    "modes": {
-                        "grab": { "distance": 140, "line_opacity": 0.5 },
-                        "push": { "particles_nb": 4 }
-                    }
-                },
+                "particles": { "number": { "value": 80, "density": { "enable": true, "value_area": 800 } }, "color": { "value": "#f0d9b5" }, "shape": { "type": "circle" }, "opacity": { "value": 0.5, "random": true }, "size": { "value": 7, "random": true }, "line_linked": { "enable": true, "distance": 150, "color": "#f0d9b5", "opacity": 0.2, "width": 1 }, "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out" } },
+                "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" } }, "modes": { "grab": { "distance": 140, "line_opacity": 0.5 }, "push": { "particles_nb": 4 } } },
                 "retina_detect": true
             });
         });
 
-        // Funciones del Modal de imágenes
         const modal = document.getElementById('image-modal');
         const modalImg = document.getElementById('modal-img');
         window.openModal = function(src) {
@@ -409,7 +329,6 @@
         window.closeModal = function() {
             modal.style.display = "none";
         }
-
     </script>
 </body>
 </html>
